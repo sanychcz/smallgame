@@ -1,17 +1,19 @@
-<h1>Fields#new</h1>
-<p>Find me in app/views/fields/new.html.erb</p>
+<div class = "field-new">
 
-<%= form_for [@desk, @field] do |f| %>
+<h1>Add new field</h1>
 
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= form_for [@desk, @field] do |f| %>
 
-	<%= f.label :win %>
-	<%= f.check_box :win %>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
 
-	<%= f.label :usual %>
-	<%= f.check_box :usual %>
+		<p><%= f.label :win, "Please check if, field is winning" %>
+		<%= f.check_box :win %></p>
 
-	<%= f.submit %>
+		<%= f.submit "Add field" %>
+		
+	<% end %>
+
+	<p><%= link_to "back to desk page", @desk  %></p>
 	
-<% end %>
+</div>

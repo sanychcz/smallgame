@@ -1,7 +1,5 @@
 class FieldsController < ApplicationController
-  
-	before_filter :authenticate
-  
+
   def new
   	@desk = Desk.find(params[:desk_id])
   	@field = @desk.fields.build
