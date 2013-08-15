@@ -1,0 +1,6 @@
+<div class="desks-index">
+	<h1>Please choose between games</h1>
+	<% @desks.each do |desk| %>
+		<h3><%= link_to desk.name, desk %></h3>
+	<% end %>
+<div>

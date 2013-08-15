@@ -1,0 +1,10 @@
+<h1>Desks#new</h1>
+<p>Find me in app/views/desks/new.html.erb</p>
+
+<%= form_for @desk do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.submit %>
+	
+<% end %>

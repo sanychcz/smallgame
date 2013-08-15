@@ -1,0 +1,17 @@
+<h1>Fields#new</h1>
+<p>Find me in app/views/fields/new.html.erb</p>
+
+<%= form_for [@desk, @field] do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :win %>
+	<%= f.check_box :win %>
+
+	<%= f.label :usual %>
+	<%= f.check_box :usual %>
+
+	<%= f.submit %>
+	
+<% end %>

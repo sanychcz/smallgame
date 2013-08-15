@@ -1,0 +1,17 @@
+<div class="desks-show">
+
+	<h1><%= @desk.name %></h1>
+
+	<div class="fields">
+		<% @desk.fields.each do |field| %>
+			<% if field.win? %>
+				<div class="field" data-image="1" data-success="true" data-number="1" ><%= field.name %></div>
+			<% else %>
+				<div class="field" data-number="1"><%= field.name %></div>
+			<% end %>
+		<% end  %>
+	</div>
+
+	<%= link_to "add fields", new_desk_field_path(@desk) %>
+
+</div>
